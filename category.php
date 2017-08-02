@@ -9,7 +9,7 @@
                         <div class="row-ab">
 
                                 <?php $count = 1; ?>
-                                <?php $total_posts = wp_count_posts()->publish; ?>
+                                <?php $total_posts = get_queried_object()->count; ?>
                                 <?php while (have_posts()) : the_post(); ?>
                                 	<?php if ($count == 1): ?>
                                         <div class="col-a">
@@ -39,7 +39,7 @@
                                             <!-- END FEATURED POST -->
 
                                         <!-- div --> <?php if ($total_posts == 1): ?></div><?php endif; ?>
-                                    <?php elseif ($count > 1 && $count < 4): ?>
+                                    <?php elseif ($count >= 2 && $count <= 3): ?>
 
                                         <!-- SECONDARY POST -->
                                         <div class="hentry secondary-entry">
@@ -74,7 +74,6 @@
                                                     <p class="topic"><?php the_time('M j') ?></p>
                                                     <h3><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
                                                 </div>
-
                                             <!-- div --> <?php if ($total_posts == $count || $count == 10): ?>
                                                             <div class="button-container">
                                                                 <a class="button" href="">See All</a>

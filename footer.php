@@ -14,7 +14,7 @@
                     'theme_location' => 'footer-primary'
                 ]);
                 ?>
-                <p class="watermark-in-footer"><?php echo base64_decode("PGEgaHJlZj0iaHR0cHM6Ly93b3JkcHJlc3MuY29tLyI+V29yZHByZXNzPC9hPiB0aGVtZSBkZXZlbG9wZWQgYnkgPGEgaHJlZj0iaHR0cHM6Ly9ib2JieWxjcmFpZy5jb20iPkJvYmJ5IEwuIENyYWlnPC9hPg=="); ?></p>
+                <p class="watermark-in-footer"><?php echo base64_decode("PGEgaHJlZj0iaHR0cHM6Ly93b3JkcHJlc3MuY29tLyI+V29yZHByZXNzPC9hPiB0aGVtZSBkZXZlbG9wZWQgYnkgPGEgaHJlZj0iaHR0cHM6Ly9ib2JieWxjcmFpZy5jb20iPkJvYmJ5IEwuIENyYWlnPC9hPg=="); ?><a class="login-button" href="<?php echo wp_login_url(); ?>">Login</a></p>
             </div>
         </footer>
     </body>

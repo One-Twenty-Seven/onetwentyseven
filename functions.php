@@ -41,6 +41,13 @@ if ( function_exists('register_sidebar') ) {
       'before_title' => '<h3>',
       'after_title' => '</h3>',
   ]);
+  register_sidebar([
+      'name' => 'Author Sidebar',
+      'before_widget' => '<div class = "author-widget">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>',
+  ]);
 }
 
 

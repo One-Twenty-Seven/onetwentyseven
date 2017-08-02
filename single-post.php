@@ -11,6 +11,12 @@
                     <div class="metadata-area">
                         <p class="single-metadata">By <?php the_author_posts_link(); ?></p>
                         <p class="single-metadata">Posted under <?php echo get_the_category_list(", "); ?></p>
+                        <?php $edit = get_edit_post_link(); ?>
+                        <?php if ($edit) { ?>
+                            <p style="margin-top: 20px;" class="single-metadata">
+                                <a href="<?php echo $edit; ?>">Edit</a>
+                            </p>
+                        <?php } ?>
                     </div>
                     <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
                     <?php $image_info = get_post( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' )->post_excerpt; ?>
@@ -23,10 +29,16 @@
                     </div>
                     <div class="metadata-area">
                         <p class="mini-bio">
+
+                            <?php $edit = get_edit_user_link( get_the_author_meta('ID') ); ?>
+                            <?php if ($edit) { ?>
+                                <a href="<?php echo $edit; ?>">Edit Author</a>...
+                            <?php } ?>
+
                             <?php if (get_the_author_meta('description')) { ?>
                                 <?php echo get_the_author_meta('description'); ?>
                             <?php } else { echo the_author_posts_link() . ' is a writer for ' . get_bloginfo( 'title' ); } ?>
-                            <span><a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a></span>
+                            <span><a href="mailto:<?php echo get_the_author_meta('email'); ?>"><i class="fa fa-envelope" aria-hidden="true"></i></a></span>
                             <?php if (get_the_author_meta('twitter')) { ?>
                                 <span><a href="https://twitter.com/<?php echo get_the_author_meta('twitter'); ?>"><i style="margin-right: 4px;" class="fa fa-twitter" aria-hidden="true"></i>@<?php echo get_the_author_meta('twitter'); ?></a></span>
                             <?php } ?>
