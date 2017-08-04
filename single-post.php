@@ -45,6 +45,10 @@
                         </p>
                     </div>
                 </div>
+                <?php if ( comments_open() || get_comments_number() ) : ?>
+                    <h2 class="commentsHeader">Comments:</h2>
+                    <?php comments_template(); ?>
+                <?php endif; ?>
             </div>
             <?php endwhile; ?>
             <?php endif; ?>

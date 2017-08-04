@@ -77,7 +77,7 @@
 
                                             <!-- div --> <?php if ($total_posts == $count || $count == 10): ?>
                                                             <div class="button-container">
-                                                                <a class="button" href="">See All</a>
+                                                                <a class="button" href="<?php echo get_year_link('');  ?>">See All</a>
                                                             </div>
                                                         </div>
                                                         <?php endif; ?>

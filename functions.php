@@ -35,14 +35,28 @@ if ( function_exists('register_sidebar') ) {
       'after_title' => '</h3>',
   ]);
   register_sidebar([
-      'name' => 'Category Sidebar',
-      'before_widget' => '<div class = "category-widget">',
+      'name' => 'Author Sidebar',
+      'before_widget' => '<div class = "author-widget">',
       'after_widget' => '</div>',
       'before_title' => '<h3>',
       'after_title' => '</h3>',
   ]);
   register_sidebar([
-      'name' => 'Author Sidebar',
+      'name' => 'Page Sidebar',
+      'before_widget' => '<div class = "page-widget">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>',
+  ]);
+  register_sidebar([
+      'name' => 'Search Sidebar',
+      'before_widget' => '<div class = "search-widget">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3>',
+      'after_title' => '</h3>',
+  ]);
+  register_sidebar([
+      'name' => 'Archive Sidebar',
       'before_widget' => '<div class = "author-widget">',
       'after_widget' => '</div>',
       'before_title' => '<h3>',

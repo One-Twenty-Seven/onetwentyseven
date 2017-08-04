@@ -21,6 +21,7 @@ get_header();
 
                     <?php
                     } else {
+
                         the_content();
 
                         // If comments are open or we have at least one comment, load up the comment template.
@@ -31,6 +32,9 @@ get_header();
                 endwhile; // End of the loop.
                 ?>
             </div>
+        </div>
+        <div class="secondary">
+            <?php get_sidebar(); ?>
         </div>
     </div>
 </div>

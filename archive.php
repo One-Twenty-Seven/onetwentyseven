@@ -6,12 +6,6 @@
         <?php if (have_posts()): ?>
 
                     <div class="primary">
-                        <div class="page-header">
-                            <h1 class="page-title">
-                                <span>Search Results For:</span>
-                                <?php echo get_search_query(); ?>
-                            </h1>
-                        </div>
                         <?php while (have_posts()) : the_post(); ?>
                             <div class="slats">
                                 <?php if (has_post_thumbnail( $post->ID ) ): ?>
@@ -34,6 +28,17 @@
                                 </div>
                             </div>
                         <?php endwhile; ?>
+                        <div class="pagination-buttons">
+                            <?php $year = get_query_var('year'); ?>
+                            <?php $backQuery = new WP_Query( ["date_query" => [ ["year" => $year + 1] ]] ); ?>
+                            <?php $nextQuery = new WP_Query( ["date_query" => [ ["year" => $year - 1] ]] ); ?>
+                            <div style="text-align: right;">
+                                <a <?php if (!$backQuery->have_posts()): ?>disabled<?php endif; ?> href="<?php echo get_year_link( $year + 1 ); ?>">Back</a>
+                            </div>
+                            <div style="text-align: left;">
+                                <a <?php if (!$nextQuery->have_posts()): ?>disabled<?php endif; ?> href="<?php echo get_year_link( $year - 1 ); ?>">Next</a>
+                            </div>
+                        </div>
                     </div> <!-- primary-->
 
                     <?php get_sidebar(); ?>
