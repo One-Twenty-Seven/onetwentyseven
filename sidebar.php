@@ -7,10 +7,6 @@
 </div>
 
 <div class="secondary">
-    <?php if ( is_author() && (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Author Sidebar") )) : ?><?php endif;?>
-</div>
-
-<div class="secondary">
     <?php if ( is_page() && (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Page Sidebar") )) : ?><?php endif;?>
 </div>
 

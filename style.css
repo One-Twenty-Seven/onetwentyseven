@@ -14,10 +14,6 @@ body {
     background-color: white;
 }
 
-ol, ul {
-    list-style: none;
-}
-
 hr {
     border: 0;
     height: 0;
@@ -997,10 +993,6 @@ ul.children {
     padding-left: 25px;
 }
 
-li {
-    display: block;
-}
-
 .comment-author span {
     display: none;
 }
@@ -1029,6 +1021,10 @@ li {
 
 .commentlist {
     padding: 0;
+}
+
+.commentlist li {
+    display: block;
 }
 
 .comment-respond {
