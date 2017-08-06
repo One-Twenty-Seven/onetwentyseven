@@ -18,6 +18,13 @@ ol, ul {
     list-style: none;
 }
 
+hr {
+    border: 0;
+    height: 0;
+    border-bottom: 1px solid #d1d3d4;
+    margin: 20px 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Share Tech Mono', "Courier New", monospace;
     margin: 0;
@@ -687,6 +694,29 @@ p.watermark-in-footer a:hover {
 .single-post-container .entry-content a {
     color: #008fd5;
     text-decoration: none;
+}
+
+.single-post-container .entry-content div.wp-caption {
+    padding: 0 30px;
+    width: 100% !important;
+}
+
+.single-post-container .entry-content div.wp-caption img {
+    width: 100%;
+    height: auto;
+}
+
+.single-post-container .entry-content div.wp-caption .wp-caption-text {
+    font-size: 0.7em;
+    padding: 0 30px;
+    text-align: center;
+    font-style: italic;
+}
+
+.single-post-container .entry-content p img {
+    width: 100%;
+    height: auto;
+    padding: 0 30px;
 }
 
 .single-post-container .entry-content a:hover {
