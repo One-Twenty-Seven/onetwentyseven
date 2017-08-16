@@ -6,7 +6,7 @@
                     </div>
                     <div class="footer-section-social">
                         <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com/127DU/&width=73&layout=button_count&action=like&size=small&show_faces=true&share=false&height=21&appId" width="73" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                        <a href="https://twitter.com/onetwentyseven" class="twitter-follow-button" data-show-count="false">Follow @onetwentyseven</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <iframe src="https://platform.twitter.com/widgets/follow_button.html?screen_name=127denison&show_screen_name=true&show_count=false&size=n" title="Follow One Twenty Seven on Twitter" height="20" width="140" style="border: 0; overflow: hidden;"></iframe>
                     </div>
                 </div>
                 <?php
